@@ -147,6 +147,7 @@ section { padding:100px 120px; position:relative; z-index:1; }
 .proj-card.feat { border-color:var(--border2); }
 .proj-top { display:flex; justify-content:space-between; align-items:center; }
 .proj-icon { font-size:26px; }
+.proj-badge { font-family:var(--font-mono); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--pastel-peach); background:rgba(252,217,168,0.07); border:1px solid rgba(252,217,168,0.2); border-radius:4px; padding:3px 8px; }
 .proj-title { font-size:16px; font-weight:700; color:#fff; }
 .proj-desc { font-size:13px; color:rgba(240,246,255,0.55); line-height:1.75; }
 .proj-points { list-style:none; display:flex; flex-direction:column; gap:7px; flex:1; }
@@ -534,13 +535,13 @@ footer span { color:var(--blue-bright); }
 
 <script>
 // ── FOTO ──
-// Opção 1: salve sua foto como "foto.jpg" na mesma pasta do index.html
+// Opção 1: salve sua foto como "foto.jpeg" na mesma pasta do index.html
 // Opção 2: cole entre aspas o texto base64 da sua foto (o mesmo que estava no arquivo antigo)
 const PHOTO_B64 = "";
 const photoEl = document.getElementById('avatar-photo');
 const fallbackEl = document.getElementById('avatar-fallback');
 photoEl.onerror = () => { photoEl.style.display = 'none'; fallbackEl.style.display = 'flex'; };
-photoEl.src = PHOTO_B64 ? 'data:image/jpeg;base64,' + PHOTO_B64 : 'foto.jpg';
+photoEl.src = PHOTO_B64 ? 'data:image/jpeg;base64,' + PHOTO_B64 : 'foto.jpeg';
 
 // ── TYPING ──
 const typingWords = ['Análise de Dados', 'Automação de Processos', 'Agentes de IA (MCP)', 'Python | SQL | Power BI'];
